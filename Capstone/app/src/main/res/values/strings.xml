@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Capstone</string>
+    <string name="hi_nama_pengguna">Hi Nama Pengguna</string>
+    <string name="take_a_video">Take A Video</string>
+    <string name="speech">Speech</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="Quiz"> Quiz </string>
+    <string name="Dictionary"> Dictionary </string>
+</resources>
