@@ -1,4 +1,4 @@
-package com.example.capstone.data.Api
+package com.example.capstone.Api
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -14,7 +14,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://sibi-dev-3jhik5vcna-et.a.run.app/api/docs#/default/DictionaryController_create")
+                .baseUrl("https://sibi-dev-3jhik5vcna-et.a.run.app/api/v1/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
