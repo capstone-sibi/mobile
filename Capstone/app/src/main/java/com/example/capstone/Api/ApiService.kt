@@ -1,17 +1,21 @@
 package com.example.capstone.Api
 
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
+import retrofit2.Call
+import retrofit2.http.GET
 import retrofit2.http.Multipart
 import retrofit2.http.POST
+import retrofit2.http.Part
 
 interface ApiService {
-    @Multipart
-    @FormUrlEncoded
+
+    @GET("dictionary")
+    fun getDictionary(
+    ) : Call<DictionaryApiResponse>
 
     @POST("dictionary")
-    suspend fun DictionaryResponse(
-        @Field("path") path: String,
-        @Field("meaning") meaning: String
-    ) : DictionaryResponse
+    @Multipart
+    fun postDictionary(
+        @Part("path") path : String,
+        @Part("meaning") meaning : String
+    ) : Call<DictionaryApiResponse>
 }

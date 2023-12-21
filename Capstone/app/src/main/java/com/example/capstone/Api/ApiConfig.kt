@@ -14,7 +14,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://sibi-dev-3jhik5vcna-et.a.run.app/api/docs#/default/DictionaryController_create")
+                .baseUrl("https://sibi-dev-3jhik5vcna-et.a.run.app/api/v1/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
