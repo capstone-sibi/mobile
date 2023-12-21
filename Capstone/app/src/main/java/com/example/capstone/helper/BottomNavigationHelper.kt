@@ -2,7 +2,7 @@ package com.example.capstone.helper
 
 import android.app.Activity
 import android.content.Intent
-import com.example.capstone.MainActivity
+import com.example.capstone.ui.main.MainActivity
 import com.example.capstone.R
 import com.example.capstone.ui.Dictionary.DictionaryActivity
 import com.example.capstone.ui.quiz.QuizActivity
@@ -25,7 +25,7 @@ object BottomNavigationHelper {
                     }
                     return@setOnItemSelectedListener true
                 }
-                R.id.navigation_dictionary -> {
+                R.id.navigation_dictionary->{
                     if (activity !is DictionaryActivity){
                         activity.startActivity(Intent(activity, DictionaryActivity::class.java))
                     }
