@@ -1,6 +1,6 @@
 package com.example.capstone.data.homeApi
 
-import com.example.capstone.data.Api.ApiService
+import com.example.capstone.data.homeApi.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -15,7 +15,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("http://35.203.44.52/")
+                .baseUrl("http://35.203.44.52")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.lifecycle.ViewModelProvider
 import com.example.capstone.R
 import com.example.capstone.databinding.ActivityMainBinding
 import com.example.capstone.helper.BottomNavigationHelper
@@ -17,16 +18,23 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var tvUri: TextView
+    private lateinit var viewModel: MainViewModel
 
     private var videoPickerLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
-        if (uri != null) {
-            tvUri.text = uri.toString()
+        uri?.let {
+            viewModel.translate("http://35.203.44.52/", it.toString(), { result ->
+                tvUri.text = result
+            }, { error ->
+                tvUri.text = error
+            })
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
         tvUri = findViewById(R.id.tv_uri)
         val uploadButton: Button = findViewById(R.id.button_upload_video)

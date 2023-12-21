@@ -4,12 +4,16 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.capstone.DictionaryAdapter
+import com.example.capstone.R
 import com.example.capstone.databinding.ActivityDictionaryBinding
+import com.example.capstone.helper.BottomNavigationHelper
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DictionaryActivity : AppCompatActivity() {
     companion object {
-        const val EXTRA_ABAOUT = "extra_abaout"
+        const val EXTRA_ABOUT = "extra_about"
     }
 
     private lateinit var binding: ActivityDictionaryBinding
@@ -20,6 +24,13 @@ class DictionaryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDictionaryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val layoutManager = LinearLayoutManager(this)
+        binding.recyclerView.layoutManager = layoutManager
+
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.nav_view)
+        BottomNavigationHelper.setupBottomNavigation(this, bottomNavigationView)
+        bottomNavigationView.selectedItemId = R.id.navigation_dictionary
 
         setupViews()
         observeViewModel()
