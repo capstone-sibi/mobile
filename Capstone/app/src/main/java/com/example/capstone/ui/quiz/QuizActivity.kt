@@ -13,5 +13,6 @@ class QuizActivity : AppCompatActivity() {
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.nav_view)
         BottomNavigationHelper.setupBottomNavigation(this, bottomNavigationView)
+        bottomNavigationView.selectedItemId = R.id.navigation_quiz
     }
 }
