@@ -28,13 +28,13 @@ class DictionaryAdapter : ListAdapter <DictionaryResponse, DictionaryAdapter.Lis
     class ListViewHolder(private val binding: DetailVidioBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(dictionary: DictionaryResponse) {
-//            Glide.with(itemView.context)
-//                .load("${dictionary.path}")
-//                .into(binding.imgItemPhoto)
+            Glide.with(itemView.context)
+                .load("${dictionary.path}")
+                .into(binding.itemVidio)
             binding.tvItemName.text = dictionary.meaning
             itemView.setOnClickListener{
                 val intent = Intent(itemView.context,DictionaryActivity::class.java)
-                intent.putExtra(DictionaryActivity.EXTRA_ABAOUT,dictionary.path)
+                intent.putExtra(DictionaryActivity.EXTRA_ABOUT,dictionary.path)
                 itemView.context.startActivity(intent)
             }
         }

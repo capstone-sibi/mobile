@@ -13,6 +13,8 @@
     <string name="detail_title">Set 1</string>
     <string name="Dictionary"> Dictionary </string>
     <string name="title_activity_detail">DetailActivity</string>
+
+    <string name="judul">Placeholder</string>
     
     <string name="searchbar_hint">Search</string>
     <!-- Strings used for fragments for navigation -->
