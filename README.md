@@ -84,7 +84,7 @@ To replicate Terura Application, please follow this steps:
 
 ## Link
 
-APK download link: 
+APK download link: bit.ly/DownloadTerura
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
