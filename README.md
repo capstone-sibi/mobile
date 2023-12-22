@@ -7,7 +7,7 @@
 <h3 align="center">TERURA</h3>
 
   <p align="center">
-    Know each other more 
+    Teman Tuna Rungu dan Tuna Wicara
     <br />
 
   </p>
