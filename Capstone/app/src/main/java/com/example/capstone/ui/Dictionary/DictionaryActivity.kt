@@ -28,6 +28,15 @@ class DictionaryActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
         binding.recyclerView.layoutManager = layoutManager
 
+        supportActionBar?.apply {
+            setDisplayUseLogoEnabled(true)
+            setDisplayShowHomeEnabled(true)
+
+            setLogo(R.drawable.logo_text_black)
+
+            title = "TERURA"
+        }
+
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.nav_view)
         BottomNavigationHelper.setupBottomNavigation(this, bottomNavigationView)
         bottomNavigationView.selectedItemId = R.id.navigation_dictionary

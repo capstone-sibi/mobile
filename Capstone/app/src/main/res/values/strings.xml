@@ -1,20 +1,24 @@
 <resources>
     <string name="app_name">TERURA</string>
-    <string name="welcome_message">Welcome!</string>
+    <string name="welcome_message">Welcome to</string>
+    <string name="app_title">TERURA</string>
+    <string name="app_subtitle">Teman Tuna Rungu dan Tuna Wicara</string>
     <string name="welcome_message_2">Translate SIBI to text and find words in SIBI</string>
     <string name="upload_video">Upload Your Video Here</string>
     <string name="speech">Speech</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="title_home">Home</string>
-    <string name="instruction">1. Upload a video and select a video from your device\n2. Wait for us to interpret the gesture\n3. Find the translated text below here\n4. To hear the interpreted text out loud, press text-to-speech button</string>
+    <string name="instruction">What to do:\n1. Upload a video and select a video from your device\n2. Wait for us to interpret the gesture\n3. Find the translated text below the button</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="Quiz"> Quiz </string>
     <string name="detail_title">Set 1</string>
     <string name="Dictionary"> Dictionary </string>
     <string name="title_activity_detail">DetailActivity</string>
+    <string name="translation">Translation will appear here!</string>
 
     <string name="judul">Placeholder</string>
+    <string name="quiz_title">Siap menguji kemampuanmu?</string>
     
     <string name="searchbar_hint">Search</string>
     <!-- Strings used for fragments for navigation -->
