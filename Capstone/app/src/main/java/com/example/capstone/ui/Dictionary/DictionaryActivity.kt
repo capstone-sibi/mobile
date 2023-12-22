@@ -1,6 +1,7 @@
 package com.example.capstone.ui.Dictionary
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -37,6 +38,10 @@ class DictionaryActivity : AppCompatActivity() {
             title = "TERURA"
         }
 
+        dictionaryViewModel.isLoading.observe(this) {
+            showLoading(it)
+        }
+
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.nav_view)
         BottomNavigationHelper.setupBottomNavigation(this, bottomNavigationView)
         bottomNavigationView.selectedItemId = R.id.navigation_dictionary
@@ -61,6 +66,14 @@ class DictionaryActivity : AppCompatActivity() {
             adapter = DictionaryAdapter()
             adapter.submitList(userList)
             binding.recyclerView.adapter = adapter
+        }
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        if (isLoading) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
         }
     }
 }
